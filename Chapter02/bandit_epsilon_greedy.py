@@ -29,5 +29,7 @@ for i in range(len(epsilons)):
 
 for i in range(len(rewards)):
     plt.plot([i for i in range(100,n_steps)], rewards[i][100:], label="Epsilon = {} Decay = {}".format(epsilons[i], decay[i]))
-leg = plt.legend(loc='best', prop={'size': 6})
+leg = plt.legend(loc='best', prop={'size': 8})
+plt.xlabel("Timestep")
+plt.ylabel("Mean Reward")
 plt.show()
